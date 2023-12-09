@@ -21,10 +21,10 @@ npm i @binarypine/http-client
 
 For more information on each library's functionalities and options, refer to their respective documentation:
 
-- axios
-- axios-retry
-- opossum
-- agentkeepalive
+- [axios](https://github.com/axios/axios)
+- [axios-retry](https://github.com/softonic/axios-retry)
+- [opossum](https://github.com/nodeshift/opossum)
+- [agentkeepalive](https://github.com/node-modules/agentkeepalive)
 
 ## Usage
 
