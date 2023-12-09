@@ -1,0 +1,67 @@
+{
+  "name": "@binarypine/http-client",
+  "version": "0.0.1",
+  "description": "HTTPClient wrapper to handle any request using axios, axios-retry, agentkeepalive and opossum",
+  "main": "lib",
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "prepare": "husky install",
+    "lint": "eslint '**/*.js'",
+    "lint:fix": "eslint '**/*.js' --fix",
+    "test": "jest --config jest.config.js",
+    "test:coverage": "jest --config jest.config.js --coverage",
+    "test:ci": "node --expose-gc ./node_modules/.bin/jest --ci --bail --runInBand --logHeapUsage --coverage",
+    "prettier": "pretty-quick --staged --cache",
+    "audit": "npm audit --groups 'dependencies devDependencies'",
+    "update-changelog": "auto-changelog -p"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BinaryPine/http-client"
+  },
+  "homepage": "https://github.com/BinaryPine/http-client/blob/main/README.md",
+  "bugs": {
+    "url": "https://github.com/BinaryPine/http-client/issues"
+  },
+  "author": "binarypine",
+  "license": "MIT",
+  "dependencies": {
+    "agentkeepalive": "^4.5.0",
+    "axios": "^1.6.2",
+    "axios-retry": "^4.0.0",
+    "opossum": "^8.1.3"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^18.4.3",
+    "@commitlint/config-conventional": "^18.4.3",
+    "@types/jest": "^29.5.11",
+    "@types/node": "^20.10.4",
+    "@types/opossum": "^8.1.6",
+    "auto-changelog": "^2.4.0",
+    "eslint": "^8.45.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-jest": "^27.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-security": "^1.7.1",
+    "eslint-plugin-sonarjs": "^0.21.0",
+    "husky": "^8.0.3",
+    "jest": "^29.7.0",
+    "msw": "^2.0.10",
+    "prettier": "^2.8.8",
+    "pretty-quick": "^3.1.3",
+    "rimraf": "^5.0.5"
+  },
+  "auto-changelog": {
+    "output": "CHANGELOG.md",
+    "template": "update-changelog.hbs",
+    "unreleased": false,
+    "commitLimit": false,
+    "startingVersion": "0.0.1",
+    "sortCommits": "date-desc",
+    "hideEmptyReleases": true
+  },
+  "engines": {
+    "node": ">=18.16.1"
+  }
+}
